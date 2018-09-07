@@ -1,0 +1,19 @@
+@import '../../../scss/mixins';
+@import '../../../scss/main';
+
+
+div.products-view {
+    app-products-menu {
+        float: left;
+    }
+
+    div.title {
+        grid-column: 2 / -1;
+    }
+
+    div.loading {
+        text-align: center;
+        padding: 50px;
+        width: 100%;
+    }
+}

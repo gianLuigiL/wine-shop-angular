@@ -1,0 +1,169 @@
+@import '../../../scss/mixins';
+@import '../../../scss/main';
+
+div.single-product-view {
+    @include flex;
+    @include flex-justify(center);
+
+    div.single-product-container {
+        max-width: 900px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 300px auto;
+        padding: 20px;
+        margin: auto;
+        border-radius: 10px;
+
+        div.image {
+
+            img {
+                width: 100%;
+            }
+        }
+
+        div.description {
+
+            h2 {
+                color: $main_highlight;
+            }
+
+            span.reviews {
+                @include flex(nowrap);
+                @include flex-align-center;
+                margin: 10px 0px;
+                transform: translateY(-30%);
+        
+                span.average {
+        
+                    img {
+                        width: 70px;
+                    }
+                }
+                span.count {
+                    margin-left: 6px;
+                    font-size: 0.9em;
+                }
+            }
+
+            h4 {
+                margin: 10px 0px;
+            }
+
+            span.price {
+                padding: 5px;
+                background-color: $main_highlight;
+                color: white;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+
+            div.country {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 40px auto;
+                align-items: center;
+                margin: 20px 0px 10px;
+        
+                & > img {
+                    object-fit: contain;
+                    max-width: 30px;
+                    border-radius: 50%;
+                    justify-self: center;
+                }
+        
+                p {
+                    cursor: pointer;
+                }
+        
+                p:focus {
+                    outline: none;
+                }
+        
+            }
+
+            div.grapes {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 40px auto;
+                align-items: center;
+        
+                span {
+                    
+                    &:first-of-type {
+                        text-align: center;
+                    }
+        
+                    img {
+                        object-fit: contain;
+                        max-width: 30px;
+                        border-radius: 50%;
+                        justify-self: center;
+                    }
+                }
+            }
+
+            div.description-text {
+                margin: 10px 0px;
+            }
+        
+            button {
+                background-color: $main-highlight;
+                border: none;
+                box-shadow: 1px 3px 3px grey;
+                padding: 8px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+    
+                &:active {
+                    box-shadow: none;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+div.related-container {
+    border-top: 2px solid $main-background-dark;
+
+    h3 {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        text-align: center;
+    }
+
+    div.related-drinks-carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-gap: 10px;
+        padding: 20px 20px;
+        border-bottom: 2px solid $main-background-dark;
+        justify-content: center;
+    
+        div.related-drink {
+            max-width: 200px;
+            width: 140px;
+            display: inline-block;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+            transition: box-shadow 0.4s;
+            text-align: center;
+    
+            &:hover {
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+            }
+    
+            img {
+                height: 70px;
+                margin: auto;
+            }
+            div.name {
+                text-align: left;
+            }
+        }
+    }
+}
+

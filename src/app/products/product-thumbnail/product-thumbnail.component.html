@@ -1,0 +1,39 @@
+<div class="thumbnail-card">
+
+  <h2 routerLink="/products/category/{{drink?.category?.name}}/{{drink?.id}}">{{drink.name | capitalizeEach}}</h2>
+  <span class="reviews">
+    <span class="average">
+      <img src="../../../assets/images/{{drink.reviews[0] || 0 }}_stars.svg">
+    </span>
+    <span class="count">({{drink.reviews[1] || 0}})
+    </span>
+  </span>
+
+  <div class="product-image">
+      <img src="../../../assets/images/bottle.svg" alt="bottle" routerLink="/products/category/{{drink?.category?.name}}/{{drink?.id}}">
+      <span class="price">
+        {{drink.price | currency: 'GBP': 'symbol': '1.2'}}
+      </span>
+  </div>
+  
+
+
+  <div class="country">
+    <img src="../../../assets/images/countries/{{drink.country.name}}.jpg">
+    <p routerLink="/products/country/{{drink.country.name}}">{{drink.country.name | capitalizeEach}}</p>
+  </div>
+
+  <div class="grapes">
+    <span><img src="../../../assets/images/grapes.svg"></span>
+    <span>
+      <a href="#" *ngFor="let grape of drink.grapes" routerLink="/products/grape/{{grape.name}}">{{grape.name | capitalizeEach}}</a>
+    </span>
+  </div>
+
+  <div class="button-holder">
+    <button (click)="addItem(drink)">
+      Add to cart
+    </button>
+  </div>
+
+</div>

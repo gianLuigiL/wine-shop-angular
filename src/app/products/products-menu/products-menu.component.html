@@ -1,0 +1,8 @@
+<nav class="navbar" [class.shrunk]="shrunk">
+  <img src="../../../assets/images/menu_active.svg" alt="close" (click)="shrink()">
+  <h3>Select by:</h3>
+  <app-menu-heading [elements]="categories" [description]="'Categories'" [elementType]="'category'"></app-menu-heading>
+  <app-menu-heading [elements]="countries" [description]="'Countries'" [elementType]="'country'"></app-menu-heading>
+  <app-menu-heading [elements]="types" [description]="'Types'" [elementType]="'type'"></app-menu-heading>
+  <app-menu-heading [elements]="grapes" [description]="'Grapes'" [elementType]="'grape'"></app-menu-heading>
+</nav>

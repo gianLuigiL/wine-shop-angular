@@ -1,0 +1,25 @@
+@import '../../../scss/mixins';
+@import '../../../scss/main';
+
+div.breadcrumbs {
+    color: $main-background-dark; 
+    padding: 5px;
+    
+    @media screen and (max-width: 700px){
+        margin-left: 20px;
+    }
+
+    span {
+        padding: 0px 5px;
+        display: inline-block;
+
+        &:not(:last-of-type):hover {
+            cursor: pointer;
+            color: $main_highlight;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

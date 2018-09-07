@@ -1,0 +1,143 @@
+@import '../../../scss/mixins';
+@import '../../../scss/main';
+:host {
+    max-width: 250px;
+}
+
+div.thumbnail-card {
+    display: grid;
+    grid-template-rows: 30px 20px auto auto auto;
+    grid-gap: 0px;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    transition: box-shadow 0.4s;
+    border-radius: 10px;
+
+    &:hover {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+    }
+
+    h2 {
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    span.reviews {
+        @include flex(nowrap);
+        @include flex-align-center;
+        transform: translateY(-30%);
+
+        span.average {
+
+            img {
+                width: 70px;
+            }
+        }
+        span.count {
+            margin-left: 6px;
+            font-size: 0.9em;
+        }
+    }
+
+    div.product-image {
+        position: relative;
+        width: 100%;
+        text-align: center;
+
+        > img {
+            max-width: 150px;
+            justify-self: center;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        span.price {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            padding: 5px;
+            background-color: $main_highlight;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    }
+    
+
+    div.country {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        padding: 3px 0px;
+
+        & > img {
+            object-fit: contain;
+            max-width: 30px;
+            border-radius: 50%;
+            justify-self: center;
+        }
+
+        p {
+            cursor: pointer;
+        }
+
+        p:focus {
+            outline: none;
+        }
+
+    }
+
+    div.grapes {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+
+        span {
+            
+            &:first-of-type {
+                text-align: center;
+            }
+
+            a{
+                display: block
+            }
+
+            img {
+                object-fit: contain;
+                max-width: 30px;
+                border-radius: 50%;
+                justify-self: center;
+            }
+        }
+    }
+
+    div.button-holder {
+        text-align: center;
+        padding: 10px;
+
+        button {
+            background-color: $main-highlight;
+            border: none;
+            box-shadow: 1px 3px 3px grey;
+            padding: 8px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+
+            &:active {
+                box-shadow: none;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

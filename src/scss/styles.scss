@@ -1,0 +1,27 @@
+@import './mixins';
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../assets/fonts/metropolis/eot/Metropolis-Regular.eot') format('embedded-opentype'), 
+      url('../assets/fonts/metropolis/woff/Metropolis-Regular.woff') format('woff'), 
+      url('../assets/fonts/metropolis/truetype/Metropolis-Regular.ttf')  format('truetype'),
+}
+
+.spacer {
+  -webkit-flex: 10000 10000 auto;
+  -ms-flexbox: 10000 10000 auto;
+  flex: 10000 10000 auto;
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+
+  body {
+    min-height: 100%;
+  }
+}

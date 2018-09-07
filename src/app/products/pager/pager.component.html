@@ -1,0 +1,9 @@
+<div class="pager-container">
+<ul>
+  <li class="first_page" [ngClass]="{disabled: pager?.currentPage == 1}" (click)="setPage(1)"><img src="../../../assets/images/first.svg" alt="first page"></li>
+  <li class="previous_page" [ngClass]="{disabled: pager?.currentPage == 1}" (click)="setPage(pager?.currentPage - 1)"><img src="../../../assets/images/previous.svg" alt="previous page"></li>
+  <li class="number_page" *ngFor="let page of pager?.visiblePages" (click)="setPage(page)" [ngClass]="{active: page === pager.currentPage}">{{page}}</li>
+  <li class="next_page" [ngClass]="{disabled: pager?.currentPage == pager?.lastPage}" (click)="setPage(pager.currentPage + 1)"><img src="../../../assets/images/previous.svg" alt="first page"></li>
+  <li class="last_page" [ngClass]="{disabled: pager?.currentPage == pager?.numOfPages}" (click)="setPage(pager.numOfPages)"><img src="../../../assets/images/first.svg" alt="last page"></li>
+</ul>
+</div>

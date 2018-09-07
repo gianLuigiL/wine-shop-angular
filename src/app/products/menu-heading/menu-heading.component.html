@@ -1,0 +1,10 @@
+<div class="menu-heading-container" [class.active]="active" (click)="toggleActive($event)">
+  <p [class.active]="active" class="menu-heading">
+    <span class="title">{{description}} </span>
+    <span class="close"><img src="../../../assets/images/menu_active.svg" alt="close"></span></p>
+    <app-menu-sub-heading *ngFor="let element of elements" [element]="element" [elementType]="elementType" >
+      <app-menu-sub-heading *ngFor="let region of element.regions" [element]="region" [elementType]="'region'" style="color: black;margin-top: 4px">
+
+      </app-menu-sub-heading>
+    </app-menu-sub-heading>
+</div>

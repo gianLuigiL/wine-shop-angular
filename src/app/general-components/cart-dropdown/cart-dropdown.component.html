@@ -1,0 +1,16 @@
+<div class="dropdown">
+    <button class="dropbtn"><img src="../assets/images/cart.svg" alt="cart"></button>
+    <div class="dropdown-content cart" *ngIf="cart">
+      <div class="items">
+        <app-cart-dropdown-item *ngFor="let item of cart" [item]="item"></app-cart-dropdown-item>
+      </div>
+      <span *ngIf="cart.length > 0" class="button-holder">
+        <button>
+          Go to cart
+        </button>
+      </span>
+      <span *ngIf="cart.length === 0" class="empty">
+        Your cart is empty, let's go shopping!
+      </span>
+    </div>
+  </div>

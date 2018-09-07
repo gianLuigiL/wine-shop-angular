@@ -1,0 +1,40 @@
+@import '../../../scss/mixins';
+@import '../../../scss/main';
+
+ div {
+
+    div.title {
+        padding: 8px;
+        @include flex(nowrap);
+        @include flex-align-center;
+        
+        h2 {
+            flex: 1 1 50%;
+            color: $main_highlight;
+        }
+
+        label.sort {
+
+            select {
+                border: 1px solid $main_highlight;
+                border-radius: 5px;
+                font-size: 1em;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+div.products-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    padding: 0px 10px;
+}
+
+:host {
+    flex: 1 1 100%;
+}

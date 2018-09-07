@@ -1,0 +1,23 @@
+div.menu-sub-heading-container {
+    padding: 3px 0px 3px 15px;
+    margin-top: 2px;
+    font-size: 0.9em;
+    transition: color 0.2s, max-height 0.3s;
+    max-height: 23px;
+    overflow: hidden;
+    color: black;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    &.active {
+        max-height: 200px;
+    }
+}
+

@@ -1,0 +1,4 @@
+<div class="menu-sub-heading-container" [class.active]="active" (click)="toggleActive($event)" routerLink="/products/{{elementType}}/{{element.name}}">
+    <p class="name">{{element.name | capitalizeEach}}</p>
+    <ng-content *ngIf="element.regions"></ng-content>
+</div>

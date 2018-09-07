@@ -1,0 +1,24 @@
+:host {
+
+    > span {
+        display: grid;
+        grid-template-columns: 40px auto 40px;
+        align-items: center;
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+    
+        &:hover:not(:last-of-type) {
+            background-color: #ddd;
+        }
+    
+        &.empty {
+            grid-template-columns: auto;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+

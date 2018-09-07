@@ -1,0 +1,45 @@
+@import '../../../scss/mixins';
+
+div.menu-heading-container {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    max-height: 30px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    
+    p.menu-heading {
+        padding: 5px;
+        @include flex(nowrap);
+        justify-content: space-between;
+
+
+        span.close {
+            position: relative;
+            width: 20px;
+
+            img {
+                max-width: 15px;
+                position: absolute;
+                transition: transform 0.3s;
+
+            }
+
+        }
+
+        &.active {
+
+            span {
+                img {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        
+    }
+    &.active {
+        max-height: 300px;
+        transition: max-height 0.3s;
+    }
+}

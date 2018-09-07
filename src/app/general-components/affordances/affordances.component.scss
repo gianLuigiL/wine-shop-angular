@@ -1,0 +1,35 @@
+@import '../../../scss/mixins';
+@import '../../../scss/main';
+
+div.affordances {
+    @include flex(nowrap);
+    @include flex-align-center;
+    padding: 8px;
+
+    h2 {
+        flex: 1 1 60%;
+        color: $main_highlight;
+    }
+
+    label {
+        flex: 1 1 40%;
+        @include flex(nowrap);
+        @include flex-align-center;
+
+        form {
+            margin-left: 10px;
+
+            select {
+                border: 1px solid $main_highlight;
+                font-size: 1.05em;
+                padding: 2px;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+        }
+    }
+
+}

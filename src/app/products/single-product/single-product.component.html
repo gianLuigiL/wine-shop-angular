@@ -1,0 +1,55 @@
+<app-breadcrumbs></app-breadcrumbs>
+<div class="single-product-view">
+  <div class="single-product-container" *ngIf="drink">
+    <div class="image">
+      <img src="../../../assets/images/bottle.svg" alt="bottle">
+    </div>
+    <div class="description">
+      <h2>{{drink?.name | capitalizeEach}}</h2>
+
+      <span class="reviews">
+        <span class="average">
+          <img src="../../../assets/images/{{drink?.reviews[0] || 0 }}_stars.svg">
+        </span>
+        <span class="count">({{drink.reviews[1] || 0}})
+        </span>
+      </span>
+
+      <h4>{{drink?.type?.name | capitalizeEach}} Wine</h4>
+
+      <span class="price">
+        {{drink?.price | currency: 'GBP': 'symbol': '1.2'}}
+      </span>
+
+      <div class="country">
+        <img src="../../../assets/images/countries/{{drink?.country.name}}.jpg">
+        <p >{{drink?.country?.name | capitalizeEach}} &bull; {{drink?.region?.name | capitalizeEach}}</p>
+      </div>
+    
+      <div class="grapes">
+        <span><img src="../../../assets/images/grapes.svg"></span>
+        <span>
+          <p href="#" *ngFor="let grape of drink?.grapes">{{grape?.name | capitalizeEach}}</p>
+        </span>
+      </div>
+
+      <div class="description-text">
+        {{drink?.description}}
+      </div>
+
+      <button (click)="addToCart(drink)">
+        Add to cart
+      </button>
+
+    </div>
+  </div>
+</div>
+<div class="related-container">
+  <h3>Related Products</h3>
+  <div class="related-drinks-carousel">
+      <div *ngFor="let related of relatedDrinks" class="related-drink">
+          <img src="../../../assets/images/bottle.svg" alt="bottle">
+          <div class="name">{{ related.name | capitalizeEach}}</div>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:42:30 UTC] PHP Notice:  Undefined index: countryName in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 104
+[20-Aug-2018 21:44:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method ProducerDB::getProducersIdByDrink() in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php:234
+Stack trace:
+#0 /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/main.php(43): DrinkDB::getDrinks()
+#1 {main}
+  thrown in /home/lg4e2jm5ntzl/public_html/lechevalier/src/app/util/classesDB.php on line 234
